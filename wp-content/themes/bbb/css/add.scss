@@ -1,0 +1,103 @@
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 13px;
+$base-line-height: 1.4;
+
+// Fixed Font
+$fixed-font-family: monospace;
+$fixed-font-size: 85%;
+$fixed-line-height: $base-line-height;
+
+// Headings
+$header-font-weight: $bold;
+
+//=========== Variables ==============
+
+
+
+//=========== Helpers ================
+
+@mixin float($direction){
+	float: $direction;
+}
+
+// Trigger hasLayOut for ie7 and downwards
+
+.trigger_layout{
+	@extend .col;
+	_height: 0;
+	zoom: 1; 
+}
+
+.clear{
+	clear: both;
+}
+
+// Columns and layout
+
+.section{
+	width: 100%;
+	height: auto;
+	padding: 30px 0px 0px 0px; 
+	min-height: 200px;   
+	.col{
+		height: inherit;
+		min-height: 200px;
+		-webkit-box-sizing: border-box; 
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 10px; 
+	}
+}
+
+.third{
+	@include float(left);
+	width: 33.3%;
+}
+
+.fourth{
+	@include float(left);
+	width: 24.25%;
+	margin-right: 1%;
+	min-height: 100%;
+}
+
+.fourth:last-child{
+	margin-right: 0; 
+}
+
+.sixth{
+	@include float(left);
+	width: 66.6%;
+}
+
+// Interactive Elements
+/**
+* Vad behövs här mer?
+*
+*/
+
+.horiz_nav{
+	display: inline-block;
+	
+	ul{
+		list-style: none;
+		
+		li{
+			float: left;
+			margin-right: 15px;
+		}
+		li:last-child{
+			float: left;
+			margin-right: 0px;
+		}
+	}
+
+}
+

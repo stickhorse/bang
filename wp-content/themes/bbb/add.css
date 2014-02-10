@@ -1,0 +1,51 @@
+@charset "UTF-8";
+.trigger_layout {
+  _height: 0;
+  zoom: 1; }
+
+.clear {
+  clear: both; }
+
+.section {
+  width: 100%;
+  height: auto;
+  min-height: 200px; }
+  .section .col, .section .trigger_layout {
+    height: inherit;
+    min-height: 200px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px; }
+
+.third {
+  float: left;
+  width: 33.3%; }
+
+.fourth {
+  float: left;
+  width: 24.25%;
+  margin-right: 1%;
+  min-height: 100%; }
+
+.fourth:last-child {
+  margin-right: 0; }
+
+.sixth {
+  float: left;
+  width: 66.6%; }
+
+/**
+* Vad behövs här mer?
+*
+*/
+.horiz_nav {
+  display: inline-block; }
+  .horiz_nav ul {
+    list-style: none; }
+    .horiz_nav ul li {
+      float: left;
+      margin-right: 15px; }
+    .horiz_nav ul li:last-child {
+      float: left;
+      margin-right: 0px; }
