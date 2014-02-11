@@ -28,6 +28,9 @@
 
 		<header>
 			<nav id="primary_nav" class="horiz_nav left">
+				<div id="logga" class="left">
+					<h1>Bang<span>/</span>Bang<span>/</span>Back</h1>
+				</div>
 				<ul>
 					<?php wp_nav_menu(); ?>
 				</ul>

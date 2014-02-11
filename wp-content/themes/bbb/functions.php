@@ -1,5 +1,5 @@
 <?php 
-// =============== Add Styles ================
+// =============================== Add Styles ================================ //
 
 if( !function_exists("theme_styles") ) {  
     function theme_styles() { 
@@ -18,5 +18,22 @@ if( !function_exists("theme_styles") ) {
 	}
 }
 add_action("wp_enqueue_scripts", "theme_styles");
+
+
+add_action('wp_dashboard_setup', 'custom_dash_widgets');
+
+function custom_dash_widgets() {
+    global $wp_meta_boxes;
+
+    wp_add_dashboard_widget('custom_help_widget', 'Theme Support', 'custom_dashboard_help');
+}
+
+function custom_dashboard_help() {
+
+    global $current_user;
+    get_currentuserinfo();
+    echo '<p>Välkommen ' . $current_user->user_firstname . '! har du något du undrar över? <br> Maila genom länken <a href="mailto:nicoantoniades@gmail.com">här</a>.</p>';
+}
+
 
 ?>
